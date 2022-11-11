@@ -8,13 +8,15 @@
 }
 
 .searchDiv input {
-    height: 35px;
+    height: 30px;
+    width: 180px;
     border-radius: 6px;
     border: 1px solid gray;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .filterDiv {
+    margin-top: 10px;
     display: flex;
     gap: 10px;
     padding: 10px 20px;
