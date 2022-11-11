@@ -9,27 +9,34 @@ export const RentPage = () => {
                 <input type={"text"} placeholder="Search with Search Bar" />
             </div>
             <div className={styles.filterDiv}>
-                <div>
-                    <select placeholder='Filter by location'>
+                <div className={styles.location}> Location
+                    <select >
                         <option value="varanasi">Varanasi</option>
                         <option value="noida">Noida</option>
                         <option value="delhi">Delhi</option>
                         <option value="mumbai">Mumbai</option>
                     </select>
                 </div>
-                
-                <div>
-                    <input type={"date"} name="moveinDate" />
+
+                <div className={styles.date}>When
+                        <input type={"date"} />
                 </div>
 
-                <div>
-                    <select placeholder='Filter by price'>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                <div className={styles.price}>Price
+                    <select style={{ "display": "block" }}>
+                        <option value="500">500</option>
+                        <option value="2500">2500</option>
+                        <option value="5000">5000</option>
                     </select>
                 </div>
+                <div className={styles.type}>Property Type
+                    <select style={{ "display": "block" }}>
+                        <option value="houses">Houses</option>
+                        <option value="banglo">Banglo</option>
+                        <option value="apartments">Apartments</option>
+                    </select>
+                </div>
+                <button>Search</button>
             </div>
         </div>
     )

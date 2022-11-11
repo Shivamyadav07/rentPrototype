@@ -1,14 +1,71 @@
-.container{
+.container {
     padding: 30px 140px;
-    border: 1px solid red;
 }
-.searchDiv{
+
+.searchDiv {
     display: flex;
     justify-content: space-between;
 }
-.searchDiv input{
+
+.searchDiv input {
     height: 35px;
     border-radius: 6px;
     border: 1px solid gray;
     margin-top: 20px;
+}
+
+.filterDiv {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.location,
+.date,
+.price,
+.type {
+    width: 220px;
+    height: 45px;
+    font-size: 13px;
+    font-weight: 500;
+    color: gray;
+    line-height: 25px;
+    border-right: 1px solid gray;
+}
+
+.location select,.price select,.type select {
+    display: block;
+    width: 210px;
+    font-size: 15px;
+    margin-left: -3px;
+    border: 0px;
+    font-weight: 600;
+    color: black;
+}
+
+.date input{
+    /* display: block; */
+    width: 210px;
+    font-size: 15px;
+    margin-left: -3px;
+    border: 0px;
+    font-weight: 600;
+    color: black;
+}
+button{
+    text-align: center;
+    height: 35px;
+    width: 70px;
+    border-radius: 6px;
+    background-color: rgb(112, 101, 240);
+    color: white;
+    border: 0px;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+input,select:focus{
+    outline: 0px;
 }
