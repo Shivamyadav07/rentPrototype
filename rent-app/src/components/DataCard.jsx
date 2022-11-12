@@ -1,7 +1,21 @@
+import axios from 'axios'
 import React from 'react'
 import styles from './DataCard.module.css'
 
 export const DataCard = ({ data }) => {
+
+  const handleWishlist=()=>{
+
+    axios.post("https://shivam-yadav-json-server-data.herokuapp.com/favorites",data)
+    .then((res)=>{
+      console.log(res);
+      alert("added to favorites")
+    })
+    .catch((err)=>{
+      console.log(err.message);
+    })
+  }
+
   return (
     <div className={styles.container}>
       <img src={data.image} alt='cardImage' />
@@ -13,7 +27,7 @@ export const DataCard = ({ data }) => {
             </label>
             /months
           </p>
-          <img src='./heart.png' alt='wishlistIcon' />
+          <img onClick={handleWishlist} src='./heart.png' alt='wishlistIcon' />
         </div>
         <p className={styles.name}>{data.name}</p>
         <p className={styles.address}>{data.adress}</p>
