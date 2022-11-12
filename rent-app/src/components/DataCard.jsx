@@ -16,7 +16,7 @@ export const DataCard = ({ data }) => {
           <img src='./heart.png' alt='wishlistIcon' />
         </div>
         <p className={styles.name}>{data.name}</p>
-        <p className={styles.address}>{data.address}</p>
+        <p className={styles.address}>{data.adress}</p>
         <div className={styles.lastDiv}>
           <div className={styles.beds}>
             <img src='./single-bed.png' alt='icon' />

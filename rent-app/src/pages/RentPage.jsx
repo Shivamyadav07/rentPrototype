@@ -1,21 +1,18 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { DataCard } from '../components/DataCard'
+import { getdata } from '../redux/action'
 import styles from './RentPage.module.css'
 
 export const RentPage = () => {
-    const [data] = useState([{
-        "name": "shivam",
-        "price": 2000,
-        "location": "varanasi",
-        "address": "chandpur mustafadad varanasi",
-        "date": "01/10/22",
-        "beds": 4,
-        "bathroom": 2,
-        "area": "8*2m",
-        "image": "https://media.istockphoto.com/id/83802508/photo/stairs-leading-to-craftsman-house.jpg?s=612x612&w=0&k=20&c=Ai2VREsZR-l8XPf0Cn5VKputzmv0bSk4CoUUW3DZf1I=",
-        "id": 1
-    }])
+    const data = useSelector((state) => state.data);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getdata());
+    }, [])
     return (
         <div className={styles.container}>
             <div className={styles.searchDiv}>
@@ -52,7 +49,7 @@ export const RentPage = () => {
                 </div>
                 <button>Search</button>
             </div>
-            <div>
+            <div className={styles.datadiv}>
                 {data.map((e) => {
                     return <DataCard key={e.id} data={e} />
                 })}

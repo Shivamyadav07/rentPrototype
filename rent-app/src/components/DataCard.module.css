@@ -1,11 +1,9 @@
 .container {
     height: auto;
     width: 320px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     padding-bottom: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* border: 1px solid red; */
 }
 
 .container>img {
@@ -19,7 +17,6 @@
     margin-top: -4px;
     width: 100%;
     padding: 10px 18px 0px 20px;
-    /* border: 1px solid red; */
     width: 88%;
 }
 
@@ -27,7 +24,6 @@
     display: flex;
     height: 50px;
     justify-content: space-between;
-    /* border: 1px solid red; */
 }
 
 .price>img {
@@ -49,7 +45,6 @@
 }
 
 .name {
-    /* border: 1px solid red; */
     margin-top: -0px;
     font-size: 20px;
     font-weight: 700;
@@ -62,7 +57,6 @@
     font-weight: 800px;
     color: gray;
     padding-bottom: 10px;
-    /* border: 1px solid red; */
 }
 
 .lastDiv {
@@ -87,5 +81,4 @@
     gap: 8px;
     height: 35px;
     color: gray;
-    /* border: 1px solid red; */
 }
