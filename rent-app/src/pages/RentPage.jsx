@@ -1,7 +1,21 @@
 import React from 'react'
+import { useState } from 'react'
+import { DataCard } from '../components/DataCard'
 import styles from './RentPage.module.css'
 
 export const RentPage = () => {
+    const [data]=useState([{
+        "name":"shivam",
+        "price":2000,
+        "location":"varanasi",
+        "address":"chandpur mustafadad varanasi",
+        "date":"01/10/22",
+        "beds":4,
+        "bathroom":2,
+        "area":"8*2m",
+        "image":"https://media.istockphoto.com/id/83802508/photo/stairs-leading-to-craftsman-house.jpg?s=612x612&w=0&k=20&c=Ai2VREsZR-l8XPf0Cn5VKputzmv0bSk4CoUUW3DZf1I=",
+        "id":1
+    }])
     return (
         <div className={styles.container}>
             <div className={styles.searchDiv}>
@@ -37,6 +51,11 @@ export const RentPage = () => {
                     </select>
                 </div>
                 <button>Search</button>
+            </div>
+            <div>
+                {data.map((e)=>{
+                    return <DataCard key={e.id} data={e} />
+                })}
             </div>
         </div>
     )

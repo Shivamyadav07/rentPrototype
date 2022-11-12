@@ -20,8 +20,7 @@
     top: 3px;
 }
 
-.link,
-p {
+.link {
     text-decoration: none;
     font-size: medium;
     margin-left: 30px;
@@ -37,14 +36,6 @@ p {
     color: rgb(112, 101, 240);
     border-radius: 6px;
     font-weight: 600;
-}
-
-p:hover {
-    height: 30px;
-    padding: 5px 5px 0px;
-    border: 1px solid rgb(112, 101, 240);
-    color: rgb(112, 101, 240);
-    border-radius: 6px;
 }
 
 .buttonBox {
